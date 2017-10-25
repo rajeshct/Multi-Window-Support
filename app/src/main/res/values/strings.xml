@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DummyMultiWindow</string>
+    <string name="dragAndDropText">Drag and Drop Text</string>
+</resources>
