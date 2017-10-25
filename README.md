@@ -48,4 +48,4 @@ We can provide default size for activity by writing below code under activity ta
 To use drag and drop feature between two activity we open activity in parallel (multi-window) and perform drag from
 `DragAndDropActivity.java`  to `MainActivity.java`
 
-![Multi-Window screen](https://github.com/rajeshct/Multi-Window-Support/blob/master/image10.png)
+![Multi-Window screen](https://github.com/rajeshct/Multi-Window-Support/blob/master/drag%20and%20drop.gif)
