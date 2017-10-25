@@ -29,18 +29,39 @@ We can provide default size for activity by writing below code under activity ta
 ### 3) Opening activity in multi-window screen 
  **Action intent explicit here**
 
+`Intent intent = new Intent(MainActivity.this, DragAndDropActivity.class);`
+`intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);`
+`startActivity(intent);`
+        
 ![Action intent explicit adjacent](https://github.com/rajeshct/Multi-Window-Support/blob/master/Action%20intent%20explicit%20here.gif)
 
 **Action intent explicit adjacent**
-
+ 
+ `Intent intent = new Intent(MainActivity.this, DragAndDropActivity.class);`
+ `intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |`
+ `Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);`
+ `startActivity(intent);`
+ 
 ![Action intent explicit adjacent](https://github.com/rajeshct/Multi-Window-Support/blob/master/Action%20intent%20explicit%20adjacent.gif)
 
 **Action intent implicit adjacent**
 
+`Intent intent = new Intent(Intent.ACTION_VIEW);`
+`intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |`
+`Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT |`
+`Intent.FLAG_ACTIVITY_MULTIPLE_TASK);`
+`startActivity(intent);`
+        
 ![Action intent implicit adjacent](https://github.com/rajeshct/Multi-Window-Support/blob/master/Action%20intent%20implicit%20adjacent.gif)
 
 **Action intent implicit here**
 
+`Intent intent = new Intent(Intent.ACTION_VIEW);`
+`intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);`
+// It doesn't work when we have a default intent chooser
+`startActivity(intent);`
+        
+        
 ![Action intent implicit here](https://github.com/rajeshct/Multi-Window-Support/blob/master/Action%20intent%20implicit%20here.gif)
 
 
